@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178
+VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event+", "Event+.csproj", "{A627A09E-07A7-4D62-891D-4F6DF519E744}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eveent+", "Eveent+.csproj", "{A627A09E-07A7-4D62-891D-4F6DF519E744}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\54261396874\\Desktop\\API projeto event+\\API-Projeto-event\\ProjetoEveent\\Eveent+.csproj": {}
+    "C:\\Users\\54261396874\\Desktop\\ProjetoEveent\\Eveent+.csproj": {}
   },
   "projects": {
-    "C:\\Users\\54261396874\\Desktop\\API projeto event+\\API-Projeto-event\\ProjetoEveent\\Eveent+.csproj": {
+    "C:\\Users\\54261396874\\Desktop\\ProjetoEveent\\Eveent+.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\54261396874\\Desktop\\API projeto event+\\API-Projeto-event\\ProjetoEveent\\Eveent+.csproj",
+        "projectUniqueName": "C:\\Users\\54261396874\\Desktop\\ProjetoEveent\\Eveent+.csproj",
         "projectName": "Eveent+",
-        "projectPath": "C:\\Users\\54261396874\\Desktop\\API projeto event+\\API-Projeto-event\\ProjetoEveent\\Eveent+.csproj",
+        "projectPath": "C:\\Users\\54261396874\\Desktop\\ProjetoEveent\\Eveent+.csproj",
         "packagesPath": "C:\\Users\\54261396874\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\54261396874\\Desktop\\API projeto event+\\API-Projeto-event\\ProjetoEveent\\obj\\",
+        "outputPath": "C:\\Users\\54261396874\\Desktop\\ProjetoEveent\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

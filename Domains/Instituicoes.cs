@@ -1,28 +1,29 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Routing.Constraints;
 using Microsoft.EntityFrameworkCore;
 
-namespace Eveent_.Domains
+namespace Event_Plus.Domains
 {
     [Table("Instituicoes")]
-    [Index(nameof(Cnpj), IsUnique = true)]
+    [Index(nameof(CNPJ), IsUnique = true)]
     public class Instituicoes
     {
         [Key]
         public Guid IdInstituicao { get; set; }
 
-        [Column(TypeName = "VARCHAR(14)")]
-        [Required(ErrorMessage = "O Cnpj e obrigatorio")]
-        [StringLength(14)]
-        public string? Cnpj {  get; set; }
+        [Column(TypeName = "VARCHAR(50)")]
+        [Required(ErrorMessage = "O Nome da instituição é obrigatoria!")]
+        public string? NomeFantasia { get; set; }
 
         [Column(TypeName = "VARCHAR(100)")]
-        [Required(ErrorMessage = "O Endereco e obrigatorio")]
+        [Required(ErrorMessage = "O Endereço é obrigatório!")]
         public string? Endereco { get; set; }
 
-        [Column(TypeName = "VARCHAR(100)")]
-        [Required(ErrorMessage = "O nome fantasia e obrigatorio")]
-        public string? NomeFantasia { get; set; }
+        [Column(TypeName = "VARCHAR(14)")]
+        [Required(ErrorMessage = "O CNPJ é obrigatório!")]
+        public string? CNPJ { get; set; }
+
+
     }
-} 
- 
+}

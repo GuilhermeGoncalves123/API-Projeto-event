@@ -2,6 +2,7 @@ using System.Reflection;
 using Eveent_.Context;
 using Eveent_.Domains;
 using Eveent_.Interfaces;
+using Eveent_.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -29,11 +30,11 @@ builder.Services.AddDbContext<Eveent_Context>(options =>
 //Adicionar o repositorio e a interface ao container da injeção de dependencia
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IEventosRepository, EventosRepository>();
-builder.Services.AddScoped<IInstituicoesRepository, InstituicoesRepository>();
-builder.Services.AddScoped<IPresencaRepository, PresencaRepository>();
-builder.Services.AddScoped<ITiposEventosRepository, TiposEventosRepository>();
-builder.Services.AddScoped<ITiposUsuariosRepository, TiposUsuariosRepository>();
-builder.Services.AddScoped<IComentarioEventosRepository, ComentarioEventosRepository>();
+builder.Services.AddScoped<IInstituicoesRepository, IInstituicoesRepository>();
+builder.Services.AddScoped<IPresencaRepository, IPresencaRepository>();
+builder.Services.AddScoped<ITiposEventosRepository, ITiposEventosRepository>();
+builder.Services.AddScoped<ITiposUsuariosRepository, ITiposUsuariosRepository>();
+builder.Services.AddScoped<IComentarioEventosRepository, IComentarioEventosRepository>();
 
 //Adicionar o serviço de controladores
 builder.Services.AddControllers();

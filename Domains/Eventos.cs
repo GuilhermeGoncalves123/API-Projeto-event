@@ -1,36 +1,44 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Eveent_.Domains
+namespace Event_Plus.Domains
 {
-    [Table("Evento")]
+    [Table("Eventos")]
     public class Eventos
     {
         [Key]
-        public Guid IdEventos { get; set; }
+        public Guid IdEvento { get; set; }
 
         [Column(TypeName = "VARCHAR(50)")]
-        [Required(ErrorMessage = "O Tipo de eventos é obrigatorio!")]
-        public string? TituloDeEventos { get; set; }
-
-        [Column(TypeName = "TEXT")]
-        [Required(ErrorMessage = "Descricao do evento e obrigatorio!")]
-        public string? Descricao { get; set; }
+        [Required(ErrorMessage = "O nome do evento é obrigatório!")]
+        public string? NomeEvento { get; set; }
 
         [Column(TypeName = "DATETIME")]
-        [Required(ErrorMessage = "A data do evento e obrigatorio!")]
-        public DateTime? DataEvento { get; set; }
+        [Required(ErrorMessage = "A data do evento é obrigatória!")]
+        public DateTime DataEvento { get; set; }
 
-        public Presenca? PresencasEvento { get; set; }
+        [Column(TypeName = "TEXT")]
+        [Required(ErrorMessage = "A descrição do evento é obrigatória!")]
+        public string? Descricao { get; set; }
 
-        public Guid IdTipoEventos { get; set; }
+        /// <summary>
+        /// Refêrencia da Tabela TipoEventos
+        /// </summary>
+        public Guid IdTipoEvento { get; set; }
 
-        [ForeignKey("IdTipoEventos")]
-        public TiposEventos? TiposEvento { get; set; }
+        [ForeignKey("IdTipoEvento")]
+        public TipoEventos? TipoEventos { get; set; }
 
+        /// <summary>
+        /// Refêrencia da Tabela Instituicao
+        /// </summary>
         public Guid IdInstituicao { get; set; }
 
         [ForeignKey("IdInstituicao")]
-        public Instituicoes? Instituicao { get; set; }
+        public Instituicoes? Instituicoes { get; set; }
+
+        public Presenca? Presenca { get; set; }
+
     }
+
 }

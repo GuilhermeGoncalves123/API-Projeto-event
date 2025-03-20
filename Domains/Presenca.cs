@@ -1,8 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using api_filmes_senai.Domains;
 
-namespace Eveent_.Domains
+namespace Event_Plus.Domains
 {
     [Table("Presenca")]
     public class Presenca
@@ -11,18 +10,8 @@ namespace Eveent_.Domains
         public Guid IdPresenca { get; set; }
 
         [Column(TypeName = "BIT")]
-        [Required(ErrorMessage = "A situção é obrigatoria")]
+        [Required(ErrorMessage = "A situação é obrigatoria!")]
         public bool Situacao { get; set; }
 
-        public Guid IdEventos { get; set; }
-
-        [ForeignKey("IdEventos")]
-        public Eventos? eventos { get; set; }
-
-        public Guid IdUsuario { get; set; }
-
-        [ForeignKey("IdUsuario")]
-        public Usuarios? Usuario { get; set; }
     }
 }
- 
